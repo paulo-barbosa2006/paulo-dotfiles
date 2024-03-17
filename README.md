@@ -45,37 +45,29 @@ I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk r
 # 🌿Galery
 
 <details>
-<summary><b><code>Desktop</code></b></summary>
+<summary><b><code>Karla</code></b></summary>
 
-|Desk|Update|packer|
-|--|--|--|
-|![demo](/assets/Screen/desk.png "demo")|![demo](/assets/Screen/update.png "demo")|![demo](/assets/Screen/pack.png "demo")|
+|![demo](/assets/karla.png)|
 
 </details>
 
 <details>
-<summary><b><code>Firefox</code></b></summary>
+<summary><b><code>Silvia</code></b></summary>
 
-|Home|Lateral-bar|
-|--|--|
-|![demo](/assets/Screen/firefox.png "demo")|![demo](/assets/Screen/firebing.png "demo")|
+|![demo](/assets/silvia.png)|
 </details>
 
 <details>
-<summary><b><code>Rofi</code></b></summary>
-
-|Launcher|Wall|Power|
-|--|--|--|
-|![demo](/assets/Screen/launch.png "demo")|![demo](/assets/Screen/wall.png "demo")|![demo](/assets/Screen/power.png "demo")|
+<summary><b><code>Cynthia</code></b></summary>
+     
+|![demo](/assets/cynthia.png)|
 
 </details>
 
 <details>
-<summary><b><code>Popup</code></b></summary>
+<summary><b><code>Cristina/code></b></summary>
 
-|Notify|Tray|Clipboard|dl-Music|Music|
-|--|--|--|--|--|
-|![demo](/assets/Screen/notify.png "demo")|![demo](/assets/Screen/tray.png "demo")|![demo](/assets/Screen/clip.png "demo")|![demo](/assets/Screen/downloadmusic.png "demo")|![demo](/assets/Screen/info.png "demo")|
+|![demo](/assets/cristina.png)|
 
 </details>
 
