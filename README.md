@@ -47,27 +47,27 @@ I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk r
 <details>
 <summary><b><code>Karla</code></b></summary>
 
-|![demo](/assets/karla.png)|
+![demo](/assets/karla.png)
 
 </details>
 
 <details>
 <summary><b><code>Silvia</code></b></summary>
 
-|![demo](/assets/silvia.png)|
+![demo](/assets/silvia.png)
 </details>
 
 <details>
 <summary><b><code>Cynthia</code></b></summary>
      
-|![demo](/assets/cynthia.png)|
+![demo](/assets/cynthia.png)
 
 </details>
 
 <details>
 <summary><b><code>Cristina/code></b></summary>
 
-|![demo](/assets/cristina.png)|
+![demo](/assets/cristina.png)
 
 </details>
 
