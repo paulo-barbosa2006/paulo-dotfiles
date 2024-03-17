@@ -45,7 +45,7 @@ I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk r
 # 🌿Galery
 
 <details>
-     
+
 <summary><b><code>Karla</code></b></summary>
 
 ![demo](/assets/karla.png)
@@ -53,7 +53,7 @@ I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk r
 </details>
 
 <details>
-     
+
 <summary><b><code>Silvia</code></b></summary>
 
 ![demo](/assets/silvia.png)
@@ -61,26 +61,36 @@ I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk r
 </details>
 
 <details>
-     
+
 <summary><b><code>Cynthia</code></b></summary>
-     
-![demo](/assets/cynthia.png)
+
+![demo](/assets/chynthia.png)
 
 </details>
 
 <details>
-     
-<summary><b><code>Cristina/code></b></summary>
+
+<summary><b><code>Cristina</code></b></summary>
 
 ![demo](/assets/cristina.png)
 
 </details>
 
+
 <details>
-     
+
 <summary><b><code>Aline</code></b></summary>
 
 ![demo](/assets/aline.png)
+
+</details>
+
+
+<details>
+
+<summary><b><code>Firefox</code></b></summary>
+
+![demo](/assets/karla.png)
 
 </details>
 
