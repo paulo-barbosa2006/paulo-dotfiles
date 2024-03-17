@@ -88,7 +88,7 @@ I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk r
 
 <summary><b><code>Firefox</code></b></summary>
 
-![demo](/assets/karla.png)
+![demo](/assets/firefox_page.png)
 
 </details>
 
