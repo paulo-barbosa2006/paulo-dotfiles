@@ -1,8 +1,6 @@
 <div align="center">
      <h1> ☕ Paulo Dotfiles ☕</h1>
  </div>
-
-![Logotype](/assets/archlinux-512.webp "arch logo")
  
 # 🌿Sections
 
