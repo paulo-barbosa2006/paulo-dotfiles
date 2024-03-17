@@ -1,9 +1,10 @@
 <div align="center">
      <h1> ☕ Paulo Dotfiles ☕</h1>
  </div>
- 
+ <div align="center">
 ![Logotype](/assets/archlinux-512.webp "a logo")
-
+ </div>
+ 
 # 🌿Sections
 
 - 🌸 [Presentations](https://github.com/paulo-barbosa2006/paulo-dotfiles/tree/main#system)
