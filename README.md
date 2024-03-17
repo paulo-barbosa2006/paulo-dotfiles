@@ -45,6 +45,7 @@ I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk r
 # 🌿Galery
 
 <details>
+     
 <summary><b><code>Karla</code></b></summary>
 
 ![demo](/assets/karla.png)
@@ -52,12 +53,15 @@ I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk r
 </details>
 
 <details>
+     
 <summary><b><code>Silvia</code></b></summary>
 
 ![demo](/assets/silvia.png)
+
 </details>
 
 <details>
+     
 <summary><b><code>Cynthia</code></b></summary>
      
 ![demo](/assets/cynthia.png)
@@ -65,6 +69,7 @@ I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk r
 </details>
 
 <details>
+     
 <summary><b><code>Cristina/code></b></summary>
 
 ![demo](/assets/cristina.png)
@@ -72,11 +77,10 @@ I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk r
 </details>
 
 <details>
-<summary><b><code>Extra</code></b></summary>
+     
+<summary><b><code>Aline</code></b></summary>
 
-|iconpack|minegrub|
-|--|--|
-|![demo](/assets/Screen/icon.png "demo")|![demo](/assets/Screen/mine.webp "demo")|
+![demo](/assets/aline.png)
 
 </details>
 
