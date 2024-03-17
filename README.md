@@ -2,7 +2,7 @@
      <h1> ☕ Paulo Dotfiles ☕</h1>
  </div>
 
-![Logotype](/assets/archlinux-512.webp "a logo")
+![Logotype](/assets/archlinux-512.webp "arch logo")
  
 # 🌿Sections
 
@@ -15,6 +15,9 @@
 
 Don't you think a system should be visually beautiful but just as fast? Simple yet elegant setup based on the BSPWM graphics system.
 This setup aims for visual elegance and fluidity.
+
+This is mainly for my personal use but if you want to take a try feel free, i will upgrade very often.
+I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk rice.
 
 ## 🌿Keys-Map
 
@@ -90,7 +93,7 @@ This setup aims for visual elegance and fluidity.
 <div style="background-color: black; color: white; padding: 10px;">
 <pre><code>
  Git/ 
- └── cd NordicBreeze/
+ └── cd paulo-dotfiles/
       ├── cp -r config/* ~/.config/
       ├── cp -r firefox/* ~/.mozilla/firefox # More informations "about:support" only firefox
       ├── cp -r fonts/* /usr/share/fonts
@@ -108,7 +111,7 @@ This setup aims for visual elegance and fluidity.
 <div style="background-color: black; color: white; padding: 10px;">
 <pre><code>
  delete only the git directory/ 
- └──  sudo rm -r NordicBreeze  
+ └──  sudo rm -r paulo-dotfiles 
 
  delete everything and even the directories for the theme/
  └──  to delete everything do install but using "rm -r"  
@@ -130,11 +133,9 @@ Packages/
     ├── Picom
     ├── Firefox
 ├── Terminal/
-│   ├── Wezterm
-    ├── Alacritty
+│    ├── Alacritty
 ├── Menu/
 │   ├── Rofi
-    ├── Jgmenu
 ├── AMD/
 │   ├── AMDctl
     ├── Corectrl
@@ -149,7 +150,7 @@ Packages/
     ├── Xblacklight
     ├── betterlocksreen 
     ├── lightdm (Glorious)
-    ├── Archcraft
+    ├── Arch
     └── themes/
         └── nordic-bluish-accent-theme/
 </code></pre>
@@ -157,20 +158,15 @@ Packages/
 
 # 🌿Contact Me
 
-- [Github](https://github.com/Shentxt)
-- [Linkelind](https://www.linkedin.com/in/federico-p-065a42217/)
+- [Github](https://github.com/paulo-barbosa2006/)
+- [Linkelind]()
 
 ## 🌿Thanks
 
-- 🌸 [Bing-IA](https://www.bing.com/?setlang=es)
 - 🌸 [Arch](https://archlinux.org/)
 - 🌸 [Unixporn](https://www.reddit.com/r/unixporn/)
-- 🌸 [Persona](https://www.tumblr.com/jakku-san/620012944745512960/noosey-woosey-noosey-woosey-noosey-woosey)
-- 🌸 [Icon](https://iconos8.es/icons)
+- 🌸 [Shentxt](https://github.com/Shentxt/NordicBreeze)
 
 ## 🌿Based in 
 
-- 🌸 [AlphaTecnolog](https://github.com/AlphaTechnolog/dotfiles)
-- 🌸 [Juminai](https://github.com/juminai/dotfiles)
 - 🌸 [Gh0stzk](https://github.com/gh0stzk/dotfiles)
-- 🌸 [Ryan](https://github.com/hidayry/dotfiles-bspwm)
