@@ -2,30 +2,28 @@
      <h1> ☕ Paulo Dotfiles ☕</h1>
  </div>
  
-![Logotype](/assets/bsp.png "a logo")
+![Logotype](/assets/archlinux-512.webp "a logo")
 
 # 🌿Sections
 
-- 🌸 [Presentations](https://github.com/Shentxt/NordicBreeze/tree/main#system)
-- 🌸 [Galery](https://github.com/Shentxt/NordicBreeze/tree/main#galery)
-- 🌸 [Intructions](https://github.com/Shentxt/NordicBreeze/tree/main#download)
-- 🌸 [Informations](https://github.com/Shentxt/NordicBreeze/tree/main#contact-me)
+- 🌸 [Presentations](https://github.com/paulo-barbosa2006/paulo-dotfiles/tree/main#system)
+- 🌸 [Galery](https://github.com/paulo-barbosa2006/paulo-dotfiles/tree/main#galery)
+- 🌸 [Intructions](https://github.com/paulo-barbosa2006/paulo-dotfiles/tree/main#download)
+- 🌸 [Informations](https://github.com/paulo-barbosa2006/paulo-dotfiles/tree/main#contact-me)
 
 ## 🌿Presentation
 
 Don't you think a system should be visually beautiful but just as fast? Simple yet elegant setup based on the BSPWM graphics system.
 This setup aims for visual elegance and fluidity.
 
-Read carefully: As not everything computers have the same features and kernel. I ask you to clarify any problem that I present in the download or post of this one. This is in order to have feedback and be able to improve.
-
 ## 🌿Keys-Map
 
-- **Win+Shift+D:** Open the key display. This key combination can be useful to access various functions in my settings.
+- **Alt + F1** Open the key display. This key combination can be useful to access various functions in my settings.
 
 
 ## 🌿System
 
-|    Distro    |                        [Archcraft](https://github.com/archcraft-os)            |
+|    Distro    |                        [Archlinux](https://github.com/archlinux)               |
 | :----------: | :----------------------------------------------------------------------------: |
 |      WM      |                 [BSPWM](https://github.com/baskerville/bspwm)                  |
 |   Terminal   |                         [Alacritty](https://alacritty)    
