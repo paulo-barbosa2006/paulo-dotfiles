@@ -92,7 +92,10 @@ I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk r
 
 </details>
 
-# 🌿Discord and BetterDiscord
+# 🌿Installations
+<details>
+
+<summary><b><code>Discord and BetterDiscord</code></b></summary>
 
 Nobody wants to have the experience of opening discord and being presented with the beautiful news that discord needs to be updated.
 Therefore, the ideal is to install the AUR discord-arch-electron and discord-update-skip-git.
@@ -108,7 +111,7 @@ Therefore, the ideal is to install the AUR discord-arch-electron and discord-upd
      makepkg -si
 </pre></code>
      
-<h2>BetterDiscordctl</h2>
+<h3>BetterDiscordctl</h3>
 <pre><code>
      $ curl -O https://raw.githubusercontent.com/bb010g/betterdiscordctl/master/betterdiscordctl
      $ chmod +x betterdiscordctl
@@ -116,11 +119,12 @@ Therefore, the ideal is to install the AUR discord-arch-electron and discord-upd
      $ sudo betterdiscordctl self-upgrade
 </pre></code>
 
-<h2>BetterDiscord</h2>
+<h3>BetterDiscord</h3>
 Replace [COMMAND] with install to install BD for the first time, reinstall to reinstall BD after a Discord update, or uninstall to uninstall an existing installation.
 <pre><code>
     $ betterdiscordctl [COMMAND]
 </pre></code>
+</details>
      
 ## 💾Download
 
