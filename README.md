@@ -150,18 +150,17 @@ Packages/
     ├── Corectrl
     ├── Supergfxctl
 ├── Features/
-    ├── Grimblast
-    ├── Stalonetra
-    ├── Xclip
-    ├── Notify-send
-    ├── Copyq
-    ├── yt-dlp
-    ├── Xblacklight
-    ├── betterlocksreen 
+    ├── Spicetify
+    ├── BetterDiscord
+    ├── Tomato.c
+    ├── tty-clock
+    ├── cbonsai
+    ├── sysfetch
+    ├── neofetch
+    ├── fairyglade
     ├── lightdm (Glorious)
-    ├── Arch
-    └── themes/
-        └── nordic-bluish-accent-theme/
+    ├── pipes.sh
+    └── Arch
 </code></pre>
 </div>
 
