@@ -4,10 +4,10 @@
  
 # 🌿Sections
 
-- 🌸 [Presentations](https://github.com/paulo-barbosa2006/paulo-dotfiles/tree/main#system)
-- 🌸 [Galery](https://github.com/paulo-barbosa2006/paulo-dotfiles/tree/main#galery)
-- 🌸 [Intructions](https://github.com/paulo-barbosa2006/paulo-dotfiles/tree/main#download)
-- 🌸 [Informations](https://github.com/paulo-barbosa2006/paulo-dotfiles/tree/main#contact-me)
+- ☕ [Presentations](https://github.com/paulo-barbosa2006/paulo-dotfiles/tree/main#system)
+- ☕ [Galery](https://github.com/paulo-barbosa2006/paulo-dotfiles/tree/main#galery)
+- ☕ [Intructions](https://github.com/paulo-barbosa2006/paulo-dotfiles/tree/main#download)
+- ☕ [Informations](https://github.com/paulo-barbosa2006/paulo-dotfiles/tree/main#contact-me)
 
 ## 🌿Presentation
 
@@ -167,10 +167,10 @@ Packages/
 
 ## 🌿Thanks
 
-- 🌸 [Arch](https://archlinux.org/)
-- 🌸 [Unixporn](https://www.reddit.com/r/unixporn/)
-- 🌸 [Shentxt](https://github.com/Shentxt/NordicBreeze)
+- ☕ [Arch](https://archlinux.org/)
+- ☕ [Unixporn](https://www.reddit.com/r/unixporn/)
+- ☕ [Shentxt](https://github.com/Shentxt/NordicBreeze)
 
 ## 🌿Based in 
 
-- 🌸 [Gh0stzk](https://github.com/gh0stzk/dotfiles)
+- ☕ [Gh0stzk](https://github.com/gh0stzk/dotfiles)
