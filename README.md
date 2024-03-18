@@ -92,23 +92,131 @@ I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk r
 
 </details>
 
+<details>
+
+<summary><b><code>Spotify</code></b></summary>
+
+![demo](/assets/spicetify.png)
+
+</details>
+
+<details>
+
+<summary><b><code>Discord</code></b></summary>
+
+![demo](/assets/discord.png)
+
+</details>
+
 # 🌿Installations
+
+<details>
+
+<summary><b><code>PipeWire</code></b></summary>
+<br>
+Pulseaudio tends to cause a lot of problems in the long term, so the solution I found is to use pipewire.
+<br>
+<pre><code>
+     sudo pacman -S pipewire pipewire-alsa wireplumber pipewire-media-session pipewire-pulse
+     
+</pre></code>
+<br>
+To avoid any conflicts with Pipewire or pipewire-pulse, you should uninstall PulseAudio completely from your system. To remove pulseaudio from Arch-based systems, run:
+<pre><code>
+     sudo pacman -Rns pulseaudio
+     
+</pre></code>
+<br>
+To disable PulseAudio services, you can run:
+<pre><code>
+     systemctl --user --now disable pulseaudio.service pulseaudio.socket
+     
+</pre></code>
+<br>
+To disable PulseAudio services, you can run:
+<pre><code>
+    systemctl --user mask pulseaudio
+     
+</pre></code>
+<br>
+Finally enable PipeWire audio server and WirePlumber session manager
+<pre><code>
+     systemctl --user --now enable pipewire pipewire-pulse wireplumber
+     systemctl --user --now enable pipewire pipewire-pulse pipewire-media-session
+     
+</pre></code>
+</details>
+
+<details>
+
+<summary><b><code>Spotify and Spicetify</code></b></summary>
+<br>
+Download spotify and spicetify
+<pre><code>
+     sudo pacman -S spotify-launcher
+     curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh | sh
+     
+</pre></code>
+<br>
+Authorize Spicetify and modify your Spotify
+<pre><code>
+     sudo chmod a+wr /opt/spotify
+     sudo chmod a+wr /opt/spotify/Apps -R
+     
+</pre></code>
+
+<pre><code>
+     cd ~/spicetify-cli
+     ./spicetify backup apply enable-devtool
+     
+</pre></code>
+<br>
+Downloading new themes
+<pre><code>
+    git clone https://github.com/morpheusthewhite/spicetify-themes.git
+    cd spicetify-themes
+    cp -r * ~/.config/spicetify/Themes
+</pre></code>
+Once installed, the themes are stored in “~/.config/spicetify/Themes/”.
+     
+<br>
+Applying the new themes
+<pre><code>
+     cd ~/spicetify-cli”
+     ./spicetify config current_theme THEMENAME
+     ./spicetify apply
+     ./spicetify config color_scheme SCHEMENAME
+     ./spicetify apply
+</pre></code>
+
+<h3>List of spicetify themes</h3>
+https://spicetify.app/docs/advanced-usage/themes/
+
+I'm currently using https://github.com/Comfy-Themes/Spicetify?tab=readme-ov-file
+![demo](/assets/spicetify.png)
+
+</details>
+
+
 <details>
 
 <summary><b><code>Discord and BetterDiscord</code></b></summary>
-
+<br>
 Nobody wants to have the experience of opening discord and being presented with the beautiful news that discord needs to be updated.
 Therefore, the ideal is to install the AUR discord-arch-electron and discord-update-skip-git.
 "A simple script to fix Discord wanting to update while the update isn't in the repos." - discord-update-skip-git
+<br>
 <pre><code>
      git clone https://aur.archlinux.org/discord_arch_electron.git
      cd discord_arch_electron
      makepkg -si
+     
 </pre></code>
 <pre><code>
      git clone https://aur.archlinux.org/discord-update-skip-git.git
      cd discord-update-skip-git
      makepkg -si
+     
 </pre></code>
      
 <h3>BetterDiscordctl</h3>
@@ -117,13 +225,23 @@ Therefore, the ideal is to install the AUR discord-arch-electron and discord-upd
      $ chmod +x betterdiscordctl
      $ sudo mv betterdiscordctl /usr/local/bin
      $ sudo betterdiscordctl self-upgrade
+     
 </pre></code>
 
 <h3>BetterDiscord</h3>
 Replace [COMMAND] with install to install BD for the first time, reinstall to reinstall BD after a Discord update, or uninstall to uninstall an existing installation.
 <pre><code>
     $ betterdiscordctl [COMMAND]
+     
 </pre></code>
+
+<h3>List of betterdiscord themes</h3>
+https://betterdiscord.app/themes
+
+I'm currently using https://github.com/refact0r/midnight-discord/blob/master/flavors/midnight-catppuccin-macchiato.theme.css
+I changed the theme css. If you installed the .config that I made available, you will have access to the theme in ~/.config/BetterDiscord/themes/
+![demo](/assets/discord.png)
+
 </details>
      
 ## 💾Download
@@ -177,6 +295,7 @@ Packages/
      ├── pipewire-alsa
      ├── wireplumber
      ├── pipewire-media-session
+     ├── pipewire-pulse
 ├── Menu/
 │   ├── Rofi
 ├── AMD/
