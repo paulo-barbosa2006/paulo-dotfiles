@@ -92,7 +92,7 @@ I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk r
 
 </details>
 
-## 🌿Discord and BetterDiscord
+# 🌿Discord and BetterDiscord
 
 Nobody wants to have the experience of opening discord and being presented with the beautiful news that discord needs to be updated.
 Therefore, the ideal is to install the AUR discord-arch-electron and discord-update-skip-git.
