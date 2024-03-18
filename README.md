@@ -176,6 +176,7 @@ Downloading new themes
     git clone https://github.com/morpheusthewhite/spicetify-themes.git
     cd spicetify-themes
     cp -r * ~/.config/spicetify/Themes
+     
 </pre></code>
 Once installed, the themes are stored in “~/.config/spicetify/Themes/”.
      
@@ -187,6 +188,7 @@ Applying the new themes
      ./spicetify apply
      ./spicetify config color_scheme SCHEMENAME
      ./spicetify apply
+     
 </pre></code>
 
 <h3>List of spicetify themes</h3>
