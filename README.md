@@ -138,6 +138,11 @@ Packages/
     ├── Firefox
 ├── Terminal/
 │    ├── Alacritty
+├── Audio/
+│    ├── pipewire
+     ├── pipewire-alsa
+     ├── wireplumber
+     ├── pipewire-media-session
 ├── Menu/
 │   ├── Rofi
 ├── AMD/
