@@ -92,6 +92,35 @@ I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk r
 
 </details>
 
+## 🌿Discord and BetterDiscord
+
+Nobody wants to have the experience of opening discord and being presented with the beautiful news that discord needs to be updated.
+Therefore, the ideal is to install the AUR discord-arch-electron and discord-update-skip-git.
+"A simple script to fix Discord wanting to update while the update isn't in the repos." - discord-update-skip-git
+<pre><code>
+     git clone https://aur.archlinux.org/discord_arch_electron.git
+     cd discord_arch_electron
+     makepkg -si
+</pre></code>
+<pre><code>
+     git clone https://aur.archlinux.org/discord-update-skip-git.git
+     cd discord-update-skip-git
+     makepkg -si
+</pre></code>
+     
+<h2>BetterDiscordctl</h2>
+<pre><code>
+     $ curl -O https://raw.githubusercontent.com/bb010g/betterdiscordctl/master/betterdiscordctl
+     $ chmod +x betterdiscordctl
+     $ sudo mv betterdiscordctl /usr/local/bin
+     $ sudo betterdiscordctl self-upgrade
+</pre></code>
+
+<h2>BetterDiscord</h2>
+Replace [COMMAND] with install to install BD for the first time, reinstall to reinstall BD after a Discord update, or uninstall to uninstall an existing installation.
+<pre><code>
+    $ betterdiscordctl [COMMAND]
+</pre></code>
 # 💾Download
 
 <div style="background-color: black; color: white; padding: 10px;">
@@ -150,6 +179,8 @@ Packages/
     ├── Corectrl
     ├── Supergfxctl
 ├── Features/
+    ├── Discord
+    ├── Spotify
     ├── Spicetify
     ├── BetterDiscord
     ├── Tomato.c
