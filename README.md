@@ -121,7 +121,8 @@ Replace [COMMAND] with install to install BD for the first time, reinstall to re
 <pre><code>
     $ betterdiscordctl [COMMAND]
 </pre></code>
-# 💾Download
+     
+## 💾Download
 
 <div style="background-color: black; color: white; padding: 10px;">
 <pre><code>
