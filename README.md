@@ -24,21 +24,22 @@ I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk r
 
 ## 🌿System
 
-|    Distro    |                        [Archlinux](https://github.com/archlinux)               |
-| :----------: | :----------------------------------------------------------------------------: |
-|      WM      |                 [BSPWM](https://github.com/baskerville/bspwm)                  |
+|    Distro    |                        [Archlinux](https://github.com/archlinux)                   |
+| :----------: | :--------------------------------------------------------------------------------: |
+|      WM      |                 [BSPWM](https://github.com/baskerville/bspwm)                      |
 |   Terminal   |                         [Alacritty](https://alacritty)    
-|   Widgets    |            [ElKowars wacky widgets](https://github.com/elkowar/eww)            |
-|     Bar      |            [Polybar](https://github.com/polybar/polybar)                       |
-|    Shell     |                [zsh](https://github.com/ohmyzsh/ohmyzsh)                       |
-|   Launcher   |                   [Rofi](https://github.com/davatorium/rofi)                   |
-|    Editor    | [Neovim](https://github.com/neovim/neovim)-[Vs](https://code.visualstudio.com/)|
-|  Compositor  |              [Picom](https://github.com/FT-Labs/picom)                         |
-| File Manager |              [Thunar](https://github.com/xfce-mirror/thunar)                   |
-| Notification |              [Dunst](https://github.com/dunst-project/dunst)                   |
-| Theme Brow   |              [Firefox-gx](https://github.com/Godiesc/firefox-gx)               |
-| Lockscreen   |     [fairyglade](https://github.com/fairyglade/ly)                             |
-| Sesion UI    |   [Glorius](https://github.com/thecmdrunner/lightdm-glorious-webkit2)          |
+|   Widgets    |            [ElKowars wacky widgets](https://github.com/elkowar/eww)                |
+|     Bar      |            [Polybar](https://github.com/polybar/polybar)                           |
+|    Shell     |                [zsh](https://github.com/ohmyzsh/ohmyzsh)                           |
+|   Launcher   |                   [Rofi](https://github.com/davatorium/rofi)                       |
+|    Editor    | [Neovim](https://github.com/neovim/neovim)-[Vs](https://code.visualstudio.com/)    |
+|  Compositor  |              [Picom](https://github.com/FT-Labs/picom)                             |
+| File Manager |              [Thunar](https://github.com/xfce-mirror/thunar)                       |
+| Notification |              [Dunst](https://github.com/dunst-project/dunst)                       |
+| Theme Brow   |              [Firefox-gx](https://github.com/Godiesc/firefox-gx)                   |
+| Lockscreen   |     [fairyglade](https://github.com/fairyglade/ly)                                 |
+| Grub         | [Graphite](https://github.com/vinceliuice/Graphite-gtk-theme/tree/main/other/grub2)|
+| Sesion UI    |   [Glorius](https://github.com/thecmdrunner/lightdm-glorious-webkit2)              |
 
 # 🌿Galery
 
@@ -109,6 +110,58 @@ I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk r
 </details>
 
 # 🌿Installations
+
+<details>
+
+<summary><b><code>GrubTheme</code></b></summary>
+
+Se você tem o arquivo Graphite-grub2-theme.tar.xz, você precisará extrair seu conteúdo para instalar o tema do Grub. Aqui está como fazer isso:
+
+    Navegue até o diretório onde o arquivo está localizado:
+    Abra um terminal e use o comando cd para navegar até o diretório onde o arquivo Graphite-grub2-theme.tar.xz está localizado. Por exemplo:
+
+    bash
+
+cd /caminho/do/seu/diretorio
+
+Extraia o conteúdo do arquivo:
+Use o comando tar para extrair o conteúdo do arquivo Graphite-grub2-theme.tar.xz. Por exemplo:
+
+tar -xf Graphite-grub2-theme.tar.xz
+
+Isso extrairá os arquivos do tema do Grub para o diretório atual.
+
+Navegue até o diretório do tema do Grub:
+Após extrair o conteúdo, navegue para o diretório recém-criado que contém os arquivos do tema do Grub. Por exemplo:
+
+bash
+
+cd Graphite-grub2-theme
+
+Instale o tema do Grub:
+Se houver um script de instalação incluído com o tema, você pode executá-lo para instalar o tema do Grub. Tente encontrar um arquivo install.sh dentro do diretório e execute-o com sudo. Por exemplo:
+
+bash
+
+sudo ./install.sh -b
+
+Isso instalará o tema do Grub no diretório /boot/grub/themes.
+
+Ajuste a resolução da tela (se necessário):
+Siga as instruções fornecidas para corrigir a resolução da tela, se necessário. Isso geralmente envolve editar o arquivo /etc/default/grub para corresponder à resolução correta.
+
+Atualize o Grub:
+Após fazer todas as configurações necessárias, atualize o Grub para aplicar as alterações:
+
+bash
+
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+    Isso atualizará o arquivo de configuração do Grub com suas novas configurações.
+
+Depois de seguir essas etapas, o tema do Grub "Graphite" deve estar instalado e configurado em seu sistema. Quando você reiniciar o sistema, deverá ver o tema Graphite sendo exibido no menu do Grub. Se precisar de mais ajuda ou encontrar problemas durante o processo de instalação, sinta-se à vontade para perguntar.
+
+</details>
 
 <details>
 
