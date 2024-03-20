@@ -398,6 +398,9 @@ Save Changes Permanently: To ensure that refresh rate changes are applied every 
  delete only the git directory/ 
  └──  sudo rm -r paulo-dotfiles 
 
+  delete unecessary directories/ 
+ └──  sudo rm -r assets 
+
  delete everything and even the directories for the theme/
  └──  to delete everything do install but using "rm -r"  
 </code></pre>
