@@ -115,51 +115,43 @@ I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk r
 
 <summary><b><code>GrubTheme</code></b></summary>
 
-Se você tem o arquivo Graphite-grub2-theme.tar.xz, você precisará extrair seu conteúdo para instalar o tema do Grub. Aqui está como fazer isso:
+You will need to extract grub2-theme.tar.xz first.
+<pre><code>
+     cd /grub-theme
+     
+</pre></code>
 
-    Navegue até o diretório onde o arquivo está localizado:
-    Abra um terminal e use o comando cd para navegar até o diretório onde o arquivo Graphite-grub2-theme.tar.xz está localizado. Por exemplo:
+Extract the contents of the file
+<pre><code>
+     tar -xf Graphite-grub2-theme.tar.xz
+     
+</pre></code>
 
-    bash
+This will extract the Grub theme files to the current directory.
 
-cd /caminho/do/seu/diretorio
+Navigate to the Grub theme directory
+<pre><code>
+     cd Graphite-grub2-theme
+     
+</pre></code>
 
-Extraia o conteúdo do arquivo:
-Use o comando tar para extrair o conteúdo do arquivo Graphite-grub2-theme.tar.xz. Por exemplo:
+Install the Grub theme. Try to find an install.sh file inside the directory and run it with sudo.
+<pre><code>
+     sudo ./install.sh -b
+     
+</pre></code>
 
-tar -xf Graphite-grub2-theme.tar.xz
+This will install the Grub theme in the /boot/grub/themes directory.
 
-Isso extrairá os arquivos do tema do Grub para o diretório atual.
 
-Navegue até o diretório do tema do Grub:
-Após extrair o conteúdo, navegue para o diretório recém-criado que contém os arquivos do tema do Grub. Por exemplo:
+Update Grub
+<pre><code>
+     sudo grub-mkconfig -o /boot/grub/grub.cfg
+     
+</pre></code>
+This will update the Grub configuration file with your new settings.
 
-bash
-
-cd Graphite-grub2-theme
-
-Instale o tema do Grub:
-Se houver um script de instalação incluído com o tema, você pode executá-lo para instalar o tema do Grub. Tente encontrar um arquivo install.sh dentro do diretório e execute-o com sudo. Por exemplo:
-
-bash
-
-sudo ./install.sh -b
-
-Isso instalará o tema do Grub no diretório /boot/grub/themes.
-
-Ajuste a resolução da tela (se necessário):
-Siga as instruções fornecidas para corrigir a resolução da tela, se necessário. Isso geralmente envolve editar o arquivo /etc/default/grub para corresponder à resolução correta.
-
-Atualize o Grub:
-Após fazer todas as configurações necessárias, atualize o Grub para aplicar as alterações:
-
-bash
-
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
-
-    Isso atualizará o arquivo de configuração do Grub com suas novas configurações.
-
-Depois de seguir essas etapas, o tema do Grub "Graphite" deve estar instalado e configurado em seu sistema. Quando você reiniciar o sistema, deverá ver o tema Graphite sendo exibido no menu do Grub. Se precisar de mais ajuda ou encontrar problemas durante o processo de instalação, sinta-se à vontade para perguntar.
+![demo](/assets/grub_theme.png)
 
 </details>
 
@@ -298,7 +290,80 @@ I changed the theme css. If you installed the .config that I made available, you
 ![demo](/assets/discord.png)
 
 </details>
+
+## 🌿Monitor settings
+<details>
+
+<summary><b><code>Monitor Layout</code></b></summary>
+If we use two monitors or more, we can start by installing arandr and thus configuring the monitor layout with a GUI
+
+<pre><code>
+    sudo pacman -Sy arandr
      
+</pre></code>
+
+After configuring the layout, save the file in ~/.screenlayout/ with a name of your choice.
+<pre><code>
+    chmod +x ~/.screenlayout/meu_layout.sh
+     
+</pre></code>
+
+To automatically run this script at startup, you can add an entry in the ~/.xprofile file to run it. If the ~/.xprofile file does not exist, you can create it.
+
+Open the ~/.xprofile file in a text editor:
+<pre><code>
+    nano ~/.xprofile
+    vim ~/.xprofile
+    nvim ~/.xprofile
+     
+</pre></code>
+
+Add the following line to the ~/.xprofile file, replacing your_layout_name.sh with the name of the configuration file you saved:
+<pre><code>
+    ~/.screenlayout/your_layout_name &
+     
+</pre></code>
+</details>
+
+<details>
+
+<summary><b><code>Change monitor hz</code></b></summary>
+</pre></code>
+
+To change the refresh rate (Hz) of your monitors in Linux and ensure that this setting is saved after rebooting the system, you can follow the steps below:
+
+Identify Monitors and their Refresh Rates: First, identify which monitors are connected to your system and their supported refresh rates. You can do this using the xrandr command.
+<pre><code>
+    xrandr --query
+
+</pre></code>
+
+Apply Changes Temporarily: You can use the xrandr command to apply changes to the refresh rate temporarily. For example, if you want to set the refresh rate to 60 Hz for a monitor called "HDMI-1", you can use the following command:
+<pre><code>
+    xrandr --output HDMI-1 --mode 1920x1080 --rate 60
+
+</pre></code>
+
+Replace "HDMI-1" with the name of your monitor and adjust the resolution as needed.
+
+Save Changes Permanently: To ensure that refresh rate changes are applied every time you boot your system, you will need to create a startup script that runs the xrandr command automatically. 
+<pre><code>
+    nano ~/.xprofile
+    vim ~/.xprofile
+    nvim ~/.xprofile
+</pre></code>
+
+<pre><code>
+    # Set the refresh rate to 60 Hz for a monitor called "HDMI-1"
+    xrandr --output HDMI-1 --mode 1920x1080 --rate 60 &
+    # You can add more monitors &
+
+    xset m 0 1
+     
+</pre></code>
+
+</details>
+
 ## 💾Download
 
 <div style="background-color: black; color: white; padding: 10px;">
@@ -354,8 +419,7 @@ Packages/
 ├── Menu/
 │   ├── Rofi
 ├── AMD/
-│   ├── AMDctl
-    ├── Corectrl
+│   ├── Corectrl
     ├── Supergfxctl
 ├── Features/
     ├── Discord
@@ -370,8 +434,7 @@ Packages/
     ├── neofetch
     ├── fairyglade
     ├── lightdm (Glorious)
-    ├── pipes.sh
-    └── Arch
+    └── pipes.sh
 </code></pre>
 </div>
 
