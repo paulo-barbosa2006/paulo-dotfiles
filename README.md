@@ -385,6 +385,7 @@ Packages/
 - ☕ [Arch](https://archlinux.org/)
 - ☕ [Unixporn](https://www.reddit.com/r/unixporn/)
 - ☕ [Shentxt](https://github.com/Shentxt/NordicBreeze)
+- ☕ [DaarcyDev](https://youtu.be/Vu5RRz11yD8?si=Zn4TD8xgC9PoQfVj) 
 
 ## 🌿Based in 
 
