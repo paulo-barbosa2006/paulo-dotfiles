@@ -312,6 +312,7 @@ Packages/
     ├── Tomato.c
     ├── tty-clock
     ├── cbonsai
+    ├── Autorandr
     ├── sysfetch
     ├── neofetch
     ├── fairyglade
