@@ -109,6 +109,15 @@ I'm doing this for fun so for now it's pretty similar in comparison of Gh0stzk r
 
 </details>
 
+
+<details>
+
+<summary><b><code>Grub</code></b></summary>
+
+![demo](/assets/grub-theme.png)
+
+</details>
+
 # 🌿Installations
 
 <details>
