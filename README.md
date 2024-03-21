@@ -332,6 +332,11 @@ Add the following line to the ~/.xprofile file, replacing your_layout_name.sh wi
     ~/.screenlayout/your_layout_name &
      
 </pre></code>
+
+<pre><code>
+     chmod +x ~/.xprofile
+     
+</pre></code>
 </details>
 
 <details>
@@ -371,6 +376,10 @@ Save Changes Permanently: To ensure that refresh rate changes are applied every 
      
 </pre></code>
 
+<pre><code>
+     chmod +x ~/.xprofile
+     
+</pre></code>
 </details>
 
 ## 💾Download
