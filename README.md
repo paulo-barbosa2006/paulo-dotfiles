@@ -451,6 +451,7 @@ Packages/
     ├── tty-clock
     ├── cbonsai
     ├── Autorandr
+    ├── Khal
     ├── sysfetch
     ├── neofetch
     ├── fairyglade
