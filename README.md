@@ -307,86 +307,49 @@ I changed the theme css. If you installed the .config that I made available, you
 If we use two monitors or more, we can start by installing arandr and thus configuring the monitor layout with a GUI
 
 <pre><code>
-    sudo pacman -Sy arandr
+    sudo nano /etc/X11/xorg.conf
+    sudo nvim /etc/X11/xorg.conf
+    sudo vim /etc/X11/xorg.conf
      
 </pre></code>
+Section "Monitor"
+    Identifier  "HDMI-A-0"
+    Option      "PreferredMode" "1920x1080"
+    Option      "Position" "0 0"
+    Option      "Rotate" "normal"
+    Option      "Refresh" "144"
+EndSection
 
-After configuring the layout, save the file in ~/.screenlayout/ with a name of your choice.
+Section "Monitor"
+    Identifier  "DisplayPort-2"
+    Option      "PreferredMode" "1920x1080"
+    Option      "Position" "1920 0"
+    Option      "Rotate" "normal"
+    Option      "Refresh" "244"
+EndSection
+
+Section "Screen"
+    Identifier  "Screen0"
 <pre><code>
     chmod +x ~/.screenlayout/meu_layout.sh
      
 </pre></code>
-
-To automatically run this script at startup, you can add an entry in the ~/.xprofile file to run it. If the ~/.xprofile file does not exist, you can create it.
-
-Open the ~/.xprofile file in a text editor:
-<pre><code>
-    nano ~/.xprofile
-    vim ~/.xprofile
-    nvim ~/.xprofile
-     
-</pre></code>
-
-Add the following line to the ~/.xprofile file, replacing your_layout_name.sh with the name of the configuration file you saved:
-<pre><code>
-    ~/.screenlayout/your_layout_name &
-     
-</pre></code>
-</details>
-
-<details>
-
-<summary><b><code>Change monitor hz</code></b></summary>
-</pre></code>
-
-To change the refresh rate (Hz) of your monitors in Linux and ensure that this setting is saved after rebooting the system, you can follow the steps below:
-
-Identify Monitors and their Refresh Rates: First, identify which monitors are connected to your system and their supported refresh rates. You can do this using the xrandr command.
-<pre><code>
-    xrandr --query
-
-</pre></code>
-
-Apply Changes Temporarily: You can use the xrandr command to apply changes to the refresh rate temporarily. For example, if you want to set the refresh rate to 60 Hz for a monitor called "HDMI-1", you can use the following command:
-<pre><code>
-    xrandr --output HDMI-1 --mode 1920x1080 --rate 60
-
-</pre></code>
-
-Replace "HDMI-1" with the name of your monitor and adjust the resolution as needed.
-
-Save Changes Permanently: To ensure that refresh rate changes are applied every time you boot your system, you will need to create a startup script that runs the xrandr command automatically. 
-<pre><code>
-    nano ~/.xprofile
-    vim ~/.xprofile
-    nvim ~/.xprofile
-</pre></code>
-
-<pre><code>
-    # Set the refresh rate to 60 Hz for a monitor called "HDMI-1"
-    xrandr --output HDMI-1 --mode 1920x1080 --rate 60 &
-    # You can add more monitors &
-
-    xset m 0 1
-     
-</pre></code>
-
 </details>
 
 ## 💾Download
 
 <div style="background-color: black; color: white; padding: 10px;">
 <pre><code>
+     git clone https://github.com/paulo-barbosa2006/paulo-dotfiles.git
+</pre></code>
+<pre><code>
  Git/ 
  └── cd paulo-dotfiles/
       ├── cp -r config/* ~/.config/
       ├── cp -r firefox/* ~/.mozilla/firefox # More informations "about:support" only firefox
-      ├── cp -r fonts/* /usr/share/fonts
-      ├── cp -r icons/* /usr/share/icons
-      ├── cp -r slice/* /usr/share/sddm/themes # Only sddm theme 
-      ├── cp -r glorius/* /usr/share/lightdm-webkit/themes/ # Only Lighdm 
-      ├── cp -r minegrub/* /boot/grub/themes/
-      ├── cp -r eww/* ~/.local/bin/
+      ├── cp -r usr/sharefonts/* /usr/share/fonts
+      ├── cp -r usr/share/icons/* /usr/share/icons
+      ├── cp -r local/bin/* ~/.local/bin/
       └── cp -r .zshrc/* ~/
 </code></pre>
 </div>
@@ -397,6 +360,9 @@ Save Changes Permanently: To ensure that refresh rate changes are applied every 
 <pre><code>
  delete only the git directory/ 
  └──  sudo rm -r paulo-dotfiles 
+
+  delete unecessary directories/ 
+ └──  sudo rm -r assets 
 
  delete everything and even the directories for the theme/
  └──  to delete everything do install but using "rm -r"  
@@ -438,12 +404,11 @@ Packages/
     ├── Tomato.c
     ├── tty-clock
     ├── cbonsai
-    ├── Autorandr
+    ├── pipes.sh
     ├── sysfetch
     ├── neofetch
     ├── fairyglade
-    ├── lightdm (Glorious)
-    └── pipes.sh
+    └── Khal
 </code></pre>
 </div>
 
