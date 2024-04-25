@@ -312,6 +312,7 @@ If we use two monitors or more, we can start by installing arandr and thus confi
     sudo vim /etc/X11/xorg.conf
      
 </pre></code>
+<pre><code>
 Section "Monitor"
     Identifier  "HDMI-A-0"
     Option      "PreferredMode" "1920x1080"
@@ -330,6 +331,8 @@ EndSection
 
 Section "Screen"
     Identifier  "Screen0"
+
+</pre></code>
 <pre><code>
     chmod +x ~/.screenlayout/meu_layout.sh
      
@@ -341,6 +344,7 @@ Section "Screen"
 <div style="background-color: black; color: white; padding: 10px;">
 <pre><code>
      git clone https://github.com/paulo-barbosa2006/paulo-dotfiles.git
+     
 </pre></code>
 <pre><code>
  Git/ 
