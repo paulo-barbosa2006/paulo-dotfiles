@@ -207,7 +207,7 @@ Finally enable PipeWire audio server and WirePlumber session manager
 <br>
 Download spotify and spicetify
 <pre><code>
-     sudo pacman -S spotify-launcher
+     Download spotify from AUR
      curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh | sh
      
 </pre></code>
@@ -220,7 +220,7 @@ Authorize Spicetify and modify your Spotify
 </pre></code>
 
 <pre><code>
-     cd ~/spicetify-cli
+     cd .spicetify
      ./spicetify backup apply enable-devtool
      
 </pre></code>
