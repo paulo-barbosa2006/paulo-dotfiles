@@ -304,12 +304,8 @@ I changed the theme css. If you installed the .config that I made available, you
 <details>
 
 <summary><b><code>Monitor Layout</code></b></summary>
-If we use two monitors or more, we can start by installing arandr and thus configuring the monitor layout with a GUI
-
 <pre><code>
-    sudo nano /etc/X11/xorg.conf
-    sudo nvim /etc/X11/xorg.conf
-    sudo vim /etc/X11/xorg.conf
+    sudo nvim /etc/X11/xorg.conf.d/10-monitor.conf
      
 </pre></code>
 <pre><code>
