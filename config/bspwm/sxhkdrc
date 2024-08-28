@@ -1,184 +1,137 @@
-#  ███████╗██╗  ██╗██╗  ██╗██╗  ██╗██████╗ ██████╗  ██████╗
-#  ██╔════╝╚██╗██╔╝██║  ██║██║ ██╔╝██╔══██╗██╔══██╗██╔════╝
-#  ███████╗ ╚███╔╝ ███████║█████╔╝ ██║  ██║██████╔╝██║     
-#  ╚════██║ ██╔██╗ ██╔══██║██╔═██╗ ██║  ██║██╔══██╗██║     
-#  ███████║██╔╝ ██╗██║  ██║██║  ██╗██████╔╝██║  ██║╚██████╗
-#  ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝
-#	z0mbi3			https://github.com/gh0stzk/dotfiles
-#
+## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
+##
+## Keybindings config for Archcraft's BSPWM
 
-#|||----- Applications -----|||#
+##---------- Keybindings for bspwm ----------##
 
-# Open Terminal (alacritty)
+# Terminal (alacritty)
 super + Return
-	OpenApps --terminal
+	bspterm
 
-# Open floating Terminal
+# Terminal (floating)
+super + shift + Return
+	bspterm --float
+
+# Terminal (fullscreen)
 super + alt + Return
-	OpenApps --floating
+	bspterm --full
 
-# Application menu
+##---------- Rofi Launcher & Menus ----------##
+
+# Rofi App Launcher
 super + @space
-	OpenApps --menu
+	rofi_launcher
 
-#####
+# Rofi Run
+ctrl + @space
+	rofi_runner
 
-# Apps (browser, editor, filemanager)
-shift + alt + {b,g,n}
-	OpenApps {--browser,--editor,--filemanager}
+# Rofi Menus/Applets
+super + {b,m,n,r,w,x}
+	{rofi_bluetooth,rofi_music,nmd,rofi_asroot,rofi_windows,rofi_powermenu}
 
-# Terminal apps (ranger, nvim, ncmpcpp)
-shift + alt + {r,v,k}
-	OpenApps {--ranger,--nvim,--spotify-launcher}
-
-
-#|||----- System Keybindings -----|||#
-
-# Show keybindings help
-alt + F1
-	KeybindingsHelp
-
-# Theme Selector
 alt + @space
-	RiceSelector
+    rofi_themes
+##---------- Applications ----------##
 
-# jgmenu
-~button3
-  xqp 0 $(xdo id -N Bspwm -n root) && jgmenu --csv-file=~/.config/bspwm/scripts/menu.txt --config-file=~/.config/bspwm/jgmenurc
+# Launch Apps
+super + shift + {f,w,e}
+	{thunar,firefox,geany}
 
-# Scratchpad
-super + alt + o
-	tdrop -a -w 70% -h 35% -y 0 -x 15%  --class scratch alacritty --class=scratch
+# Terminal Apps
+ctrl + alt + {v,r,h}
+	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e {vim,ranger,htop}
 
-# Power off, Reboot, Log out, Lockscreen, kill an app
-ctrl + super + alt + {p,r,q,l,k}
-	{systemctl poweroff, systemctl reboot,bspc quit,physlock -d,xkill}
+# Color Picker
+super + p
+	bspcolorpicker
 
-# Hide/Show Bar (Polybar and/or eww)
-super + {h,u}
-	HideBar {-h,-u}
+# Music
+ctrl + alt + m
+	bspmusic
 
-# Change transparency on focused window
-ctrl + alt + {p,o,t}
-	picom-trans {-c -o +3,-c -o -1,-c -d}
+# Lockscreen
+ctrl + alt + l
+    betterlockscreen --lock
 
-# Random wallpaper
-super + alt + w
-	WallSelect
+##---------- System Keys ----------##
 
-# Screenshot Now
-
-# Screenshot Select
-ctrl + shift + s
-	ScreenShoTer --sel
-
-# Screenshot in 10s
-alt + Print	ScreenShoTer --in10
-
-# Screenshot active window
-shift + Print
-	ScreenShoTer --active
-
-# Manage brightness
-XF86MonBrightness{Up,Down}
-    sh Brightness {up,down}
-
-# Volume control
-XF86Audio{RaiseVolume,LowerVolume,Mute}
-	Volume{ --inc, --dec, --toggle}
-
-# Music Control
-XF86Audio{Next,Prev,Play,Stop}
-	MediaControl {--next,--previous,--toggle,--stop}
-
-#|||----- Keyboard layout -----|||#
-
-shift + alt
-	{setxkbmap pt, setxkbmap us}
-
-#|||----- Bspwm hotkeys -----|||#
-
-# Reload BSPWM
-super + alt + r
-	bspc wm -r
-
-# close and kill
-super + {_,shift + }q
-	bspc node -{c,k}
+# Take a screenshot
+Print
+	bspscreenshot --now
 	
-# Reload Keybindings
-super + Escape
-	pkill -USR1 -x sxhkd; dunstify -u low -i ~/.config/bspwm/assets/reload.svg 'sxhkd' 'The configuration file has been reloaded successfully!'
+# Take screenshot in 5 second
+alt + Print	
+	bspscreenshot --in5
 
-#####
+# Take screenshot in 10 second
+shift + Print	
+	bspscreenshot --in10
 
-# alternate between the tiled and monocle layout
-super + m
-	bspc desktop -l next
+# Take screenshot of active window
+ctrl + Print
+	bspscreenshot --win
 
-# set the window state
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+# Take screenshot of area
+super + shift + s
+	bspscreenshot --area
 
-# set the node flags
-ctrl + alt {m,x,s,p}
-	bspc node -g {marked,locked,sticky,private}
+# Brighness control
+super + {k,l}
+	bspbrightness{ --inc, --dec}
+	
+# Speaker Volume control
+XF86Audio{RaiseVolume,LowerVolume}
+	bspvolume{ --inc, --dec}
+
+# Mic Volume control
+XF86Audio{Mute,MicMute}
+	bspvolume{ --toggle, --toggle-mic}
+	
+# Music control
+XF86Audio{Next,Prev,Play,Stop}
+	mpc {next,prev,toggle,stop}
+
+##---------- Bspwm ----------##
 
 # Hide/Unhide Window
 ctrl + alt + h
-	BspHideNode
+	bspwinmask
 
-#####
+# Close App
+super + {_,shift + }q
+	bspc node -{c,k}
 
-# rotate desktop
-super + r
-	bspc node @/ --rotate {90,-90}
-
-# Circulate the leaves of the tree
-super + c
-	bspc node @/ --circulate {backward,forward}
-
-# Change focus of the Node or Swap Nodes
-super + {_,shift + }{Left,Down,Up,Right}
-	bspc node -{f,s} {west,south,north,east}
+# Quit/Restart bspwm
+super + alt + r
+	bspc wm -r
+	
+# Reload Keybindings
+super + Escape
+	pkill -USR1 -x sxhkd
 
 # Switch workspace
 ctrl + shift + {a,d}
-	bspc desktop -f {prev,next}.local
+	bspc desktop -f {prev.local,next.local}
 
-# focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
+# Switch workspace or Send focused Node to another workspace
+ctrl + {_,shift + }{1-8}
+	bspc {desktop -f,node -d} '^{1-8}' '--follow'
 
-# focus or send to the given desktop
-super + ctrl + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
-	
 # Send focused Node to workspace directionally
 super + ctrl + shift + {Left,Right}
 	bspc node -d {prev,next} '--follow'
 
+# Change focus of the Node or Swap Nodes
 super + shift + {a,s,w,d}
 	dir={west,south,north,east}; \
 	bspc node -s "$dir.local" --follow \
 		|| bspc node -m "$dir" --follow
 
-#####
+# Move floating windows
+super + ctrl + {a,s,w,d}
+	bspc node -v {-10 0,0 10,0 -10,10 0}
 
-# preselect the direction
-super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
-
-# cancel the preselection for the focused node
-super + ctrl + space
-	bspc node -p cancel
-
-363;5u# cancel the preselection for the focused desktop
-super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
-
-#####
-	
 # expand a window
 super + alt + {a,s,w,d}
 	bspc node -z {left -10 0,bottom 0 10,top 0 -10,right 10 0}
@@ -187,7 +140,20 @@ super + alt + {a,s,w,d}
 alt + ctrl + {a,s,w,d}
 	bspc node -z {right -10 0,top 0 10,bottom 0 -10,left 10 0}
 
-# move a floating window
-super + ctrl {a,s,w,d}
-	bspc node -v {-10 0,0 10,0 -10,10 0}
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
+# Set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+# Change focus to next window, including floating window
+alt + {_,shift + }Tab
+	bspc node -f {next.local,prev.local}
+
+# Switch to last opened workspace
+super + {Tab,grave}
+	bspc {node,desktop} -f last
+	
+##---------- EOF ----------##
