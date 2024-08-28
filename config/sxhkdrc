@@ -1,0 +1,159 @@
+## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
+##
+## Keybindings config for Archcraft's BSPWM
+
+##---------- Keybindings for bspwm ----------##
+
+# Terminal (alacritty)
+super + Return
+	bspterm
+
+# Terminal (floating)
+super + shift + Return
+	bspterm --float
+
+# Terminal (fullscreen)
+super + alt + Return
+	bspterm --full
+
+##---------- Rofi Launcher & Menus ----------##
+
+# Rofi App Launcher
+super + @space
+	rofi_launcher
+
+# Rofi Run
+ctrl + @space
+	rofi_runner
+
+# Rofi Menus/Applets
+super + {b,m,n,r,w,x}
+	{rofi_bluetooth,rofi_music,nmd,rofi_asroot,rofi_windows,rofi_powermenu}
+
+alt + @space
+    rofi_themes
+##---------- Applications ----------##
+
+# Launch Apps
+super + shift + {f,w,e}
+	{thunar,firefox,geany}
+
+# Terminal Apps
+ctrl + alt + {v,r,h}
+	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e {vim,ranger,htop}
+
+# Color Picker
+super + p
+	bspcolorpicker
+
+# Music
+ctrl + alt + m
+	bspmusic
+
+# Lockscreen
+ctrl + alt + l
+    betterlockscreen --lock
+
+##---------- System Keys ----------##
+
+# Take a screenshot
+Print
+	bspscreenshot --now
+	
+# Take screenshot in 5 second
+alt + Print	
+	bspscreenshot --in5
+
+# Take screenshot in 10 second
+shift + Print	
+	bspscreenshot --in10
+
+# Take screenshot of active window
+ctrl + Print
+	bspscreenshot --win
+
+# Take screenshot of area
+super + shift + s
+	bspscreenshot --area
+
+# Brighness control
+super + {k,l}
+	bspbrightness{ --inc, --dec}
+	
+# Speaker Volume control
+XF86Audio{RaiseVolume,LowerVolume}
+	bspvolume{ --inc, --dec}
+
+# Mic Volume control
+XF86Audio{Mute,MicMute}
+	bspvolume{ --toggle, --toggle-mic}
+	
+# Music control
+XF86Audio{Next,Prev,Play,Stop}
+	mpc {next,prev,toggle,stop}
+
+##---------- Bspwm ----------##
+
+# Hide/Unhide Window
+ctrl + alt + h
+	bspwinmask
+
+# Close App
+super + {_,shift + }q
+	bspc node -{c,k}
+
+# Quit/Restart bspwm
+super + alt + r
+	bspc wm -r
+	
+# Reload Keybindings
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# Switch workspace
+ctrl + shift + {a,d}
+	bspc desktop -f {prev.local,next.local}
+
+# Switch workspace or Send focused Node to another workspace
+ctrl + {_,shift + }{1-8}
+	bspc {desktop -f,node -d} '^{1-8}' '--follow'
+
+# Send focused Node to workspace directionally
+super + ctrl + shift + {Left,Right}
+	bspc node -d {prev,next} '--follow'
+
+# Change focus of the Node or Swap Nodes
+super + shift + {a,s,w,d}
+	dir={west,south,north,east}; \
+	bspc node -s "$dir.local" --follow \
+		|| bspc node -m "$dir" --follow
+
+# Move floating windows
+super + ctrl + {a,s,w,d}
+	bspc node -v {-10 0,0 10,0 -10,10 0}
+
+# expand a window
+super + alt + {a,s,w,d}
+	bspc node -z {left -10 0,bottom 0 10,top 0 -10,right 10 0}
+
+# contract a window
+alt + ctrl + {a,s,w,d}
+	bspc node -z {right -10 0,top 0 10,bottom 0 -10,left 10 0}
+
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# Set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+# Change focus to next window, including floating window
+alt + {_,shift + }Tab
+	bspc node -f {next.local,prev.local}
+
+# Switch to last opened workspace
+super + {Tab,grave}
+	bspc {node,desktop} -f last
+	
+##---------- EOF ----------##
